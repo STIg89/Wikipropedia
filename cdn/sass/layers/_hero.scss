@@ -1,0 +1,56 @@
+.hero { 
+    padding: 40px 0;
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-position: right 50px bottom;
+    background-size: 153px 300px; 
+      @include tablet {
+        padding: 70px 0;
+        background-image: url(../images/hero-bg-tab-min.svg);
+        background-size: 445px 235px;
+      }
+      @include desktop {
+        padding: 180px 0;
+        background-image:  url(../images/hero-bg-pc-min.svg);
+        background-size: 773px 415px;
+      }
+    &__content { 
+        text-align: center;
+        @include mobile { 
+          text-align: left;
+            max-width: 500px;
+        }
+        @include tablet { 
+            max-width: 400px;
+        }
+
+    }
+    &__title { 
+        font-family: 'Product Sans', sans-serif;
+        @include fonts(400, 30px, 44px, 0.03em);
+        color: var(--text-color);
+        margin-bottom: 40px;
+        @include tablet {   
+          font-size: 36px;
+        }
+    }
+    &__btn-list { 
+      display: none;
+      @include tablet { 
+        display: flex;
+        gap: 20px; 
+        flex-direction: column; 
+        @include tablet { 
+            flex-direction: row;
+        }
+      }
+    }
+    &__btn { 
+      font-size: 15px;
+        display: block;
+        max-width: 150px;
+        padding: 10px 25px;
+        line-height: 15px;
+    }
+}
+
